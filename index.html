@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>kriya kouyoumjian · Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf5f7;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      color: #1e1e1e;
+    }
+
+    .resume-card {
+      max-width: 1100px;
+      width: 100%;
+      background: white;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08);
+      border-radius: 32px;
+      padding: 2.8rem 3rem;
+      transition: all 0.2s ease;
+      border: 1px solid #fce4ec;
+    }
+
+    .name-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+
+    .name-title h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1e1e1e;
+    }
+
+    .name-title .date {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #4a4a4a;
+      background: #fce4ec;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      letter-spacing: 0.2px;
+    }
+
+    .subhead {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.2rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #f8e8eb;
+    }
+
+    .subhead .birth {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #2b2b2b;
+      background: #fce4ec;
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+    }
+
+    .subhead .address {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #2b2b2b;
+      background: #fce4ec;
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+      max-width: 70%;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem 2.5rem;
+      margin-top: 0.6rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      color: #1e1e1e;
+    }
+
+    .contact-row i {
+      width: 1.4rem;
+      color: #d66b7a;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin: 1.8rem 0 1.2rem 0;
+      border-bottom: 2px solid #d66b7a;
+      padding-bottom: 0.4rem;
+      display: inline-block;
+      color: #1e1e1e;
+    }
+
+    .section-title i {
+      margin-right: 10px;
+      font-size: 1.1rem;
+      color: #d66b7a;
+    }
+
+    .timeline-item {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .timeline-year {
+      width: 120px;
+      font-weight: 500;
+      color: #1e1e1e;
+      flex-shrink: 0;
+    }
+
+    .timeline-desc {
+      flex: 1;
+      font-weight: 400;
+      color: #1e1e1e;
+    }
+
+    .timeline-desc strong {
+      font-weight: 600;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: #fce4ec;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 400;
+      margin: 0.2rem 0.2rem 0.2rem 0;
+      color: #1e1e1e;
+      border: 1px solid #f8d7de;
+    }
+
+    .skill-tag i {
+      margin-right: 5px;
+      font-size: 0.8rem;
+      color: #d66b7a;
+    }
+
+    .motivation-text {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #1e1e1e;
+      max-width: 100%;
+      margin-top: 0.2rem;
+    }
+
+    .motivation-text p {
+      margin-bottom: 1rem;
+    }
+
+    .badge-link {
+      font-weight: 500;
+      color: #d66b7a;
+      text-decoration: none;
+      border-bottom: 1px dotted #f0c4cd;
+    }
+
+    .badge-link:hover {
+      border-bottom: 1px solid #d66b7a;
+    }
+
+    .highlight-pink {
+      background: #fce4ec;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-weight: 500;
+      display: inline-block;
+      color: #1e1e1e;
+    }
+
+    .highlight-pink i {
+      color: #d66b7a;
+      margin-right: 6px;
+    }
+
+    .pref-box {
+      background: #fcf6f8;
+      border: 1px solid #fce4ec;
+      border-radius: 20px;
+      padding: 1.4rem 1.8rem;
+      color: #1e1e1e;
+      font-weight: 400;
+    }
+
+    .pref-box i {
+      color: #d66b7a;
+    }
+
+    .pref-tag {
+      background: #fce4ec;
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      border: 1px solid #f8d7de;
+      color: #1e1e1e;
+    }
+
+    .pref-tag i {
+      color: #d66b7a;
+      margin-right: 4px;
+    }
+
+    .footnote {
+      font-size: 0.8rem;
+      color: #5a5a5a;
+      margin-top: 2rem;
+      border-top: 1px solid #f8e8eb;
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+
+    .footnote i {
+      color: #d66b7a;
+    }
+
+    @media (max-width: 600px) {
+      .resume-card {
+        padding: 1.8rem 1.2rem;
+      }
+      .name-title h1 {
+        font-size: 2.2rem;
+      }
+      .subhead .address {
+        max-width: 100%;
+        margin-top: 0.4rem;
+      }
+      .timeline-year {
+        width: 100%;
+        font-weight: 600;
+        margin-bottom: 0.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="resume-card">
+
+  <!-- HEADER -->
+  <div class="name-title">
+    <h1>kriya kouyoumjian</h1>
+    <span class="date"><i class="far fa-calendar-alt" style="margin-right: 6px; color: #d66b7a;"></i>2026.05.21</span>
+  </div>
+
+  <div class="subhead">
+    <span class="birth"><i class="far fa-calendar-check" style="color: #d66b7a;"></i> Born: 2005.02.17 · Age 21</span>
+    <span class="address"><i class="fas fa-map-pin" style="color: #d66b7a;"></i> 〒134-0083 · Nakakasai, Edogawa-ku, Tokyo · Global House 3-20-8</span>
+  </div>
+
+  <div class="contact-row">
+    <span><i class="fas fa-phone-alt"></i> Phone: 〒134-0083</span>
+    <span><i class="fas fa-envelope"></i> Email: Available upon request</span>
+  </div>
+
+  <!-- ========== EDUCATION ========== -->
+  <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+  <div class="timeline-item">
+    <span class="timeline-year">2023 – 2027</span>
+    <span class="timeline-desc"><strong>Musashino University</strong> · Faculty of Global Studies · Global Business (expected graduation 2027)</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-year">2023</span>
+    <span class="timeline-desc"><strong>South Side High School</strong> · International Baccalaureate (IB) — Graduated</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-year">2019 – 2023</span>
+    <span class="timeline-desc"><strong>League Academy</strong> · Junior High School — Graduated</span>
+  </div>
+
+  <!-- ========== WORK EXPERIENCE ========== -->
+  <div class="section-title" style="margin-top: 1.8rem;"><i class="fas fa-briefcase"></i> Work Experience &amp; Internships</div>
+
+  <div class="timeline-item">
+    <span class="timeline-year">2025-26 · 9-5</span>
+    <span class="timeline-desc"><strong>Overseas Marketing (Contract)</strong> · UI/UX · X, Inc.</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-year">2025 · 7-9</span>
+    <span class="timeline-desc"><strong>Global Media Research Intern</strong> · Anime / AI / Entertainment · Tokyo EPIC Co.</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-year">2025 · 12</span>
+    <span class="timeline-desc"><strong>Marketing Intern</strong> · Film Industry · Global Stage Hollywood</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-year">2023 · 6-8</span>
+    <span class="timeline-desc"><strong>Marketing Internship</strong> · RELIABLE SPRINKLER (U.S. company)</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-year">2024-25 · 3-5</span>
+    <span class="timeline-desc"><strong>Dormitory Resident Assistant</strong> · Event Coordinator</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-year">2020 · 9</span>
+    <span class="timeline-desc"><strong>English Tutoring (2 weeks)</strong> · Visions International School (Volunteer)</span>
+  </div>
+
+  <!-- ========== CERTIFICATIONS ========== -->
+  <div class="section-title"><i class="fas fa-certificate"></i> Certifications &amp; Licenses</div>
+  <div class="timeline-item">
+    <span class="timeline-year">2026 · 12</span>
+    <span class="timeline-desc">JLPT N2 (currently studying)</span>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-year">2024</span>
+    <span class="timeline-desc">
+      <strong>IAFOR Undergraduate Research Symposium</strong> · Market Research · Presentation Completed
+      <span style="display: inline-block; margin-left: 12px;">
+        <a href="https://drive.google.com/file/d/1_hqfBXvgCkVGpxgKVbtqPtifd3VA_1SQ/view?usp=sharing" target="_blank" class="badge-link" style="font-weight: 400; font-size: 0.85rem;"><i class="fas fa-external-link-alt"></i> Link</a>
+      </span>
+    </span>
+  </div>
+
+  <!-- ========== SKILLS ========== -->
+  <div class="section-title"><i class="fas fa-code"></i> Skills &amp; Expertise</div>
+  <div style="display: flex; flex-wrap: wrap; gap: 0.3rem 0.3rem; margin-bottom: 0.3rem;">
+    <span class="skill-tag"><i class="fab fa-microsoft"></i> Microsoft Office</span>
+    <span class="skill-tag"><i class="fas fa-chart-line"></i> Google Analytics</span>
+    <span class="skill-tag"><i class="fas fa-paint-brush"></i> Adobe (Illustrator, Premiere Pro, Lightroom, Photoshop · learning)</span>
+    <span class="skill-tag"><i class="fas fa-cube"></i> Blender (learning)</span>
+    <span class="skill-tag"><i class="fas fa-hashtag"></i> SNS Management (Instagram · X)</span>
+    <span class="skill-tag"><i class="fas fa-language"></i> English / French / Japanese </span>
+    <span class="skill-tag"><i class="fas fa-share-alt"></i> Hootsuite</span>
+    <span class="skill-tag"><i class="fas fa-laptop"></i> UI/UX Design (learning · practical experience)</span>
+    <span class="skill-tag"><i class="fas fa-tasks"></i> Project &amp; Budget Management</span>
+    <span class="skill-tag"><i class="fas fa-cloud"></i> Google Workspace (Sheets, Docs, Drive)</span>
+  </div>
+
+  <!-- ========== MOTIVATION ========== -->
+  <div class="section-title"><i class="fas fa-bullseye"></i> Motivation, Strengths &amp; Appeal</div>
+  <div class="motivation-text">
+    <p>
+      At <strong>Musashino University</strong>, I study ESG, SDGs, and global marketing. I have developed the ability to analyze challenges from an international perspective and propose actionable solutions. I am also self-studying UI/UX design to strengthen my user-centric thinking, while actively exploring Blender and digital art to expand my creative skill set.
+    </p>
+    <p>
+      I am deeply interested in the intersection of AI, entertainment, and manufacturing. I previously interned at <strong>Tokyo Epic</strong>, an AI-driven animation studio, where I collaborated with both the global expansion team and the animation team. Through this experience, I learned about content production workflows and the process of promoting Japanese content overseas — including SNS content planning, IP research, and global strategy support.
+    </p>
+    <p>
+      Most recently, I worked as a UI/UX improvement intern at <strong>X Inc.</strong>, where I contributed to building more user-friendly services by incorporating feedback from overseas users.
+    </p>
+    <p>
+      I am proficient in Microsoft Office and Google Workspace, and I am currently learning Adobe Premiere Pro, Lightroom, and Figma. I also work with Blender and bisiPaint for digital art and 3D modeling, and I aim to bring these creative skills into my future career.
+    </p>
+    <p style="margin-top: 0.6rem;">
+      <span class="highlight-pink"><i class="fas fa-star"></i>Future Vision</span> 
+      I aspire to work in the entertainment industry, manufacturing, or international business — leveraging my global perspective, creative abilities, and passion for technology.
+    </p>
+  </div>
+
+  <!-- ========== PREFERENCES ========== -->
+  <div class="section-title"><i class="fas fa-pen-fancy"></i> Personal Preferences</div>
+  <div class="pref-box">
+    <p style="font-style: italic; color: #2b2b2b;">
+      <i class="fas fa-asterisk" style="font-size: 0.6rem; vertical-align: middle; color: #d66b7a;"></i> 
+      Salary, role, working hours, location, and other preferences — open to discussion (currently flexible)
+    </p>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.4rem;">
+      <span class="pref-tag"><i class="far fa-clock"></i> Flextime OK</span>
+      <span class="pref-tag"><i class="fas fa-globe-asia"></i> Tokyo / Remote OK</span>
+      <span class="pref-tag"><i class="fas fa-briefcase"></i> Entertainment / Manufacturing / International</span>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <i class="far fa-file-pdf"></i> Kuyumijan Kuriya · 2026.06.18 · Latest version
+  </div>
+
+</div>
+<!-- end resume-card -->
+</body>
+</html>
